@@ -7,16 +7,23 @@
 </head>
 <body>
 <script>   
-    function contar2(){
-            
+       function contar(contador){
 
-        for(;j<10; j++){
-            document.write(j);
-        }
-    }
+for(;contador<10; contador++){
+    document.write(contador);
+}
+}
 
-    let j = 1
-    contar2()
+
+
+document.write("i vale: "+i+ "<br>")
+
+//El valor de i se copia en el parámetro local contador de la función.
+let i = 4;
+contar(i)
+
+//i sigue valiendo 1, a pesar de que contador la hemos incrementado hasta 10.
+document.write("i, después de contar, vale: "+i+ "<br>")
     document.write("En el programa principal j vale: "+j); 
 </script>
 </body>
