@@ -7,23 +7,36 @@
 </head>
 <body>
 <script>
- // Aquí se define la función pintarNombre
- function pintarNombre(nombre, apellidos='Sin apellidos', edad = 18){
-            const MAYORIA_EDAD = 18
-            document.write(`El usuario se llama ${nombre} y tiene los apellidos ${apellidos} - `)
+function multiplicar(numero){
 
-            if(edad>=MAYORIA_EDAD){
-                document.write("Es mayor de edad <br>")
-            }else{
-                document.write("Es menor de edad <br>")
+       const NUM_TABLAS = 5
+        const BASE = 1
+        const NUM_FILAS = 10;
+        const TITULO = "Tabla de multiplicar del "
+
+        let i = 1;
+        let j = 1;
+
+        //Esto pinta los títulos
+        while (i <= NUM_TABLAS) {
+            document.write(TITULO)
+            document.write(i)
+
+            document.write("<br>")
+
+            //Este loop pinta las 10 entradas de la tabla de multiplicar
+            while (j <= NUM_FILAS) {
+                document.write(`${i} x ${j} = ${i * j}`)
+                document.write("<br>")
+                j++
             }
+
+            j = 1
+            i++
         }
-
-        //Aquí se llama a la función y se ejecuta.
-        pintarNombre("María", "Pérez",30)
-
-        //Aquí solo se le pasa el primer parámetro (nombre), por lo que cogerá el valor por defecto de apellidos (sin apellidos) y la edad (18)
-        pintarNombre("María") 
+    }
+    function multiplicar()
+    
 </script>
 </body>
 </html>
